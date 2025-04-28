@@ -1,0 +1,10 @@
+# CS472 W1D1
+
+QUESTION 1
+Block HTML Elements
+
+<div>, <section>, <footer>,  <header>, <footer>, <nav>, <aside>, <article>, <ol>/<li>, <ul>/<li>, <p>, <h1>
+
+Inline HTML Elements
+
+<span>, <6>, <hr>, <br>, <img>, <a>, , <strong>, <i>, <form>, <input>, <textarea>, <button>, /<option>, <label>, <select>
