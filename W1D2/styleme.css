@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  padding: 5px;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+.heading {
+  color: red;
+  font-family: Arial, sans-serif;
+  font-size: 40px;
+  font-weight: bolder;
+}
+.desc {
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: blueviolet;
+  padding: 10px;
+}
