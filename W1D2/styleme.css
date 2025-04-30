@@ -1,11 +1,14 @@
 body {
   margin: 0;
-  padding: 5px;
+  padding: 0;
+
+  background-color: #f0f0f0;
 }
 .box {
   display: flex;
   flex-direction: column;
-  background-color: #f0f0f0;
+  width: 80%;
+  margin: 0 auto;
 }
 .heading {
   color: red;
@@ -24,6 +27,19 @@ body {
 .img-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: start;
+  align-items: start;
+}
+#paragraph {
+  color: red;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+.w1d2-test2 {
+  color: green;
+}
+
+.w1d2-test {
+  color: blue;
 }
