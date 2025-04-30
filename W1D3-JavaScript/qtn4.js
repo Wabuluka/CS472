@@ -31,7 +31,6 @@ export function delete_item_by_id(id) {
   // delete the item (if id exist)
   data = data.filter((item) => item.id !== id);
   console.log("Item deleted successfully");
-  // return true if item is deleted successfully, false otherwise
 }
 export function get_item_title_by_id(id) {
   // return the item title by id (if id exist)
