@@ -1,5 +1,5 @@
 let libraryBooks = [
-  { title: "The Road Ahead", author: "Bill Gates", ID: 1235 },
+  { title: "The Roads Ahead", author: "Bill Gates", ID: 3235 },
   { title: "Walter Isaacson", author: "Steve Jobs", ID: 4268 },
   { title: "The Road Ahead", author: "Bill Gates", ID: 4268 },
   {
@@ -9,14 +9,33 @@ let libraryBooks = [
   },
 ];
 
+// Add book to the library
 function addBook(title, author, ID) {
   libraryBooks.push({ title, author, ID });
 }
 
-(function printBooks() {
-  console.log("Library Books: \n___________________________");
+// Get book titles
+function getTitles() {
+  let titles = libraryBooks.map((book) => book.title);
+  return titles.sort((a, b) => a.localeCompare(b));
+}
 
-  libraryBooks.forEach((book) => {
-    console.log(`Title: ${book.title}, Author: ${book.author}, ID: ${book.ID}`);
-  });
+// find book by keyword in title sorted by ID
+function findBooksByKeyword(keyword) {
+  let books = libraryBooks.filter((book) =>
+    book.title.toLowerCase().includes(keyword.toLowerCase())
+  );
+  return books.sort((a, b) => a.ID - b.ID);
+}
+
+(function printBooks() {
+  addBook("The Hunger Games", "Suzanne Collins", 1234);
+  addBook("Harry Potter and the Philosopher's Stone", "J.K. Rowling", 1236);
+
+  console.log("\n\nLibrary Books");
+  console.table(libraryBooks);
+  console.log("\n\nBook Titles");
+  console.table(getTitles());
+  console.log("\n\nBooks with keyword 'the'");
+  console.table(findBooksByKeyword("road"));
 })();
