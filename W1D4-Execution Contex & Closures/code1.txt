@@ -1,0 +1,14 @@
+1. Global EC creation:
+    Outer: null, 
+    LE: [a:undefined, b:undefined, c:undefined], 
+    TDZ: {x}
+
+2. FEC: c() - creation
+    Outer: global, 
+    LE: [arguments{8,9,10}, f:undefined, x: undefined], 
+    TDZ: {}
+
+3. FEC Execution: f()
+    Outer: block-function 
+    LE: [x:undefined,], 
+    TDZ: {b, c}
