@@ -1,0 +1,14 @@
+1. Global EC creation:
+    Outer: null, 
+    LE: [foo:undefined, fn: bar()], 
+    TDZ: {}
+
+2. FEC: bar()
+    Outer: global, 
+    LE: [foo: undefined], 
+    TDZ: {}
+
+3. FEC Execution: bar()
+    Outer: global, 
+    LE: [arguments{10}, alert(foo)], 
+    TDZ: {}

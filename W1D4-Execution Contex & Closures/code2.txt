@@ -1,0 +1,14 @@
+1. Global EC creation:
+    Outer: null, 
+    LE: [x:undefined, myFunction() ], 
+    TDZ: {}
+
+2. FEC:myFunction()
+    Outer: global, 
+    LE: [arguments{}], 
+    TDZ: {}
+
+3. FEC Execution:
+    Outer: global, 
+    LE: [arguments{x*x}], 
+    TDZ: {}
