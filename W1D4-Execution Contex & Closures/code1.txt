@@ -10,5 +10,5 @@
 
 3. FEC Execution: f()
     Outer: block-function 
-    LE: [x:undefined,], 
+    LE: [arguments{8, 6, 10}, x:undefined,], 
     TDZ: {b, c}

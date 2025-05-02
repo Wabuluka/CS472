@@ -1,0 +1,20 @@
+a. Greetings, John
+b. 
+
+1. Global EC creation:
+    Outer: null, this: window
+    LE: [fn: show], 
+    TDZ: {str,user}
+
+2. FEC: user -> execution
+    Outer: global, this: 
+    LE: [user: fn, Greeting, John, display: fn], 
+    TDZ: {}
+
+3. FEC Creation: display
+    Outer: user, 
+    LE: [show: fn ], 
+    TDZ: {}
+4. FEC Execution: show
+    Outer: global this.window
+    LE[arguments{'hello'}, ]
