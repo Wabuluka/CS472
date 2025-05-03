@@ -4,7 +4,39 @@ b.
 1. Global EC creation:
     Outer: null, this: window
     LE: [fn: show], 
-    TDZ: {str,user}
+    TDZ: {str,user: obj}
+
+2. FEC: user -> creation -> execution
+    Outer: global: this: undefined
+    LE [fn:display, ]
+    tdz: {}
+
+3. FEC: display -> creation -> execution
+    Outer: global, this: user
+    LE [arguments{}, Greetings, John]
+    tdz {}
+
+4. FEC: show -> creation -> execution
+    Outer: global, this: window
+    LE [arguments{}, Greetings undefined]
+
+5. FEC: show -> execution
+    Outer: global, this: window
+    LE[arguments{}, hello, smith]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 2. FEC: user -> execution
     Outer: global, this: 

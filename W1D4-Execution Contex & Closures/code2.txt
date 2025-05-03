@@ -9,6 +9,6 @@
     TDZ: {}
 
 3. FEC Execution:
-    Outer: global, 
-    LE: [arguments{x*x}], 
-    TDZ: {}
+    Outer: global 
+    LE: [arguments{}], 
+    TDZ: {...}

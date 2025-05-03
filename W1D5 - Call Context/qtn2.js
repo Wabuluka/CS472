@@ -14,5 +14,5 @@ let user = {
   },
 };
 
-askPassword(user.loginOk, user.loginFail);
+askPassword(user.loginOk.bind(user), user.loginFail.bind(user));
 // askPassword.bind(user)();
