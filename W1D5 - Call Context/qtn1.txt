@@ -23,30 +23,3 @@ b.
 5. FEC: show -> execution
     Outer: global, this: window
     LE[arguments{}, hello, smith]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2. FEC: user -> execution
-    Outer: global, this: 
-    LE: [user: fn, Greeting, John, display: fn], 
-    TDZ: {}
-
-3. FEC Creation: display
-    Outer: user, 
-    LE: [show: fn ], 
-    TDZ: {}
-4. FEC Execution: show
-    Outer: global this.window
-    LE[arguments{'hello'}, ]

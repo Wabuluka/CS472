@@ -1,8 +1,8 @@
 {
   "cSpell.words": ["styleme", "Wabuluka"],
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.organizeImports": true
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
   },
   "github.copilot.enable": {
     "*": false, // Disable for all languages
