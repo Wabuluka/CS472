@@ -48,16 +48,16 @@ class Exercise3 {
   }
 }
 const ex = new Exercise3();
-console.log(ex.add_genre("thriller")); // true
-console.log(ex.add_genre("thriller")); // false
+console.log(ex.add_genre("thriller"));
+console.log(ex.add_genre("thriller"));
 
 console.log(
   ex.add_movie_in_genre("thriller", { id: "1", title: "The American" })
-); // true
+);
 console.log(ex.add_movie_in_genre("thriller", { id: "2", title: "Arcadian" })); // true
 console.log(
   ex.add_movie_in_genre("thriller", { id: "1", title: "Duplicated Movie" })
-); // false
+);
 
 console.log(
   ex.update_movie_title_by_genre_and_movie_id(
@@ -65,8 +65,8 @@ console.log(
     "1",
     "The American Updated"
   )
-); // true
-console.log(ex.get_movie_title_by_id("thriller", "1")); // The American Updated
+);
+console.log(ex.get_movie_title_by_id("thriller", "1"));
 
-console.log(ex.delete_movie_by_genre_and_movie_id("thriller", "2")); // true
-console.log(ex.get_movie_title_by_id("thriller", "2")); // ""
+console.log(ex.delete_movie_by_genre_and_movie_id("thriller", "2"));
+console.log(ex.get_movie_title_by_id("thriller", "2"));
