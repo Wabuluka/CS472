@@ -1,15 +1,13 @@
-import { useState } from "react";
-import "./App.css";
-import CounterTextComponent from "./CounterTextComponent";
-
 function App() {
-  const [counter, setCounter] = useState(0);
   return (
     <>
       <div>
-        <button onClick={() => setCounter(() => counter + 1)}>+1</button>
-        <CounterTextComponent counter={counter} />
-        <button onClick={() => setCounter(() => counter - 1)}>-1</button>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+          nihil et enim in nostrum quia ea voluptates? Voluptates voluptatem
+          distinctio minima minus veniam nesciunt dicta ab. Natus, minus?
+          Maiores, deleniti.
+        </p>
       </div>
     </>
   );
