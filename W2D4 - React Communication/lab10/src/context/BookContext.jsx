@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 const BookContext = createContext(null);
 export const BookProvider = ({ children }) => {
   const [books, setBooks] = useState([]);
@@ -8,13 +8,27 @@ export const BookProvider = ({ children }) => {
 
   async function deleteBook(id) {
     try {
-      console.log(id);
+      // console.log(id);
       await axios.delete(
         `https://681cf41cf74de1d219ae5d39.mockapi.io/api/v1/books/${id}`
       );
       setBooks(books.filter((book) => book.id !== id));
     } catch {
       setError("Failed to delete book");
+    }
+  }
+
+  async function getBookById(id) {
+    try {
+      // console.log("hello", id);
+      setLoading(true);
+      return await axios.get(
+        `https://681cf41cf74de1d219ae5d39.mockapi.io/api/v1/books/${id}`
+      );
+    } catch (error) {
+      console.log("Failed to get book", error);
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -67,6 +81,7 @@ export const BookProvider = ({ children }) => {
         addBook,
         updateBook,
         deleteBook,
+        getBookById,
         loading,
         error,
       }}

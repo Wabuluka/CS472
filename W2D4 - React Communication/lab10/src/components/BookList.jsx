@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router";
 import { useBookContext } from "../context/BookContext";
 import { EditBook } from "./EditBook";
 export default function BookList() {
@@ -19,7 +20,12 @@ export default function BookList() {
                 {book.title} {book.id}
               </h3>
               <p>{book.author}</p>
-              <button onClick={() => setEditingBookId(book.id)}>Edit</button>
+              <Link type="button" to={`/edit/${book.id}`}>
+                Edit
+              </Link>
+              {/* <button href="/edit" onClick={() => setEditingBookId(book.id)}>
+                Edit
+              </button> */}
               <button onClick={() => deleteBook(book.id)}>Delete</button>
             </>
           )}
