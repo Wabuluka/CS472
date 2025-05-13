@@ -1,0 +1,8 @@
+1. What is LibUV?
+A multi-platform library with a focus on asynchronous I/O
+
+2. Explain the difference between setImmediate(f) and setTimeout(f, Time)?
+setTimeout(f, Time) is used to execute a function after a specified delay (in milliseconds), while setImmediate(f) is used to execute a function immediately after the current event loop phase. The main difference is that setTimeout can be delayed by the time specified, while setImmediate will execute as soon as the current event loop cycle is completed.
+ 
+3. Explain the difference between process.nextTick(f) and setImmediate(f)?
+process.nextTick(f) is used to execute a function in the current phase of the event loop, before any I/O operations or timers. It allows you to schedule a callback to be executed immediately after the current operation completes. On the other hand, setImmediate(f) is used to execute a function in the next iteration of the event loop, after all I/O operations and timers have completed. The main difference is that process.nextTick will execute before any I/O operations, while setImmediate will execute after all I/O operations in the current phase.
