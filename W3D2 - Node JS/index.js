@@ -24,3 +24,19 @@ Promise.resolve().then(() => {
   process.nextTick(() => console.log("nextTick inside Promise")); // 4
 });
 process.nextTick(() => console.log("nextTick 1")); //1
+
+/**
+ * Expected Output:
+ *
+ * nextTick 1
+ * Promise.resolve 1
+ * Promise.resolve 2
+ * nextTick inside Promise
+ * this is setTimeout
+ * this is setImmediate 1
+ * this is setImmediate 2
+ * Promise.resolve inside setImmediate
+ * readablStream close event
+ * [data from readFile callback]
+ * this is setTimeout
+ */
