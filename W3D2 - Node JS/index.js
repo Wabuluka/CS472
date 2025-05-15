@@ -4,11 +4,12 @@
 const fs = require("fs");
 const rd = fs.createReadStream("input.txt");
 rd.close();
-rd.on("close", () => console.log("readablStream close event")); //9
+rd.on("close", () => console.log("readableStream close event")); //9
 fs.readFile("input.txt", "utf-8", (error, data) => {
   if (error) console.log(error);
   else console.log(data); //10
 });
+process.nextTick(() => console.log("nextTick 1111"));
 setTimeout(() => console.log("this is setTimeout"), 5000); //11
 setTimeout(() => console.log("this is setTimeout"), 0); //5
 setImmediate(() => console.log("this is setImmediate 1")); //6
@@ -36,7 +37,7 @@ process.nextTick(() => console.log("nextTick 1")); //1
  * this is setImmediate 1
  * this is setImmediate 2
  * Promise.resolve inside setImmediate
- * readablStream close event
+ * readableStream close event
  * [data from readFile callback]
  * this is setTimeout
  */
