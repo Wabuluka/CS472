@@ -6,3 +6,5 @@ setTimeout(f, Time) is used to execute a function after a specified delay (in mi
  
 3. Explain the difference between process.nextTick(f) and setImmediate(f)?
 process.nextTick(f) is used to execute a function in the current phase of the event loop, before any I/O operations or timers. It allows you to schedule a callback to be executed immediately after the current operation completes. On the other hand, setImmediate(f) is used to execute a function in the next iteration of the event loop, after all I/O operations and timers have completed. The main difference is that process.nextTick will execute before any I/O operations, while setImmediate will execute after all I/O operations in the current phase.
+
+4. V8 - is a javascript runtime engine made by google
