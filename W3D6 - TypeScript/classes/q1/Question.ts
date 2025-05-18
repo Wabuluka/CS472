@@ -10,6 +10,7 @@ class Question {
   getQid(): string {
     return this.qid;
   }
-
-  addAnswer(answer: string): void {}
+  checkAnswer(answer: string): boolean {
+    return this.answer === answer;
+  }
 }
